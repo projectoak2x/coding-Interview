@@ -14,6 +14,8 @@
     --primarylight: #92C79D;
     --primarydark: #035e2d;
 	--bodyTextColorWhite: #EBEBEB ;
+    --grayBackground: #E9E6EA;
+    --bodyTextColorBlue: #145FA4;
 	--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) clamp(1rem, 1.5vw, 2rem);
 }
 
@@ -194,6 +196,103 @@ a {
 .cs-container {
     margin: auto;
 	max-width: 1280px;
+}
+
+.card-container {
+    max-width: 1240px;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 27px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    .cs-text, .cs-title {
+        color: var(--bodyTextColorWhite);
+    }
+    .card-text {
+        padding: 40px;
+        margin: auto;
+    }
+}
+
+.pricing-container {
+    background-color: var(--grayBackground);
+    display: flex;
+    flex-direction: column;
+    max-width: 1035px;
+    width: 100%;
+    padding: 40px 36px;
+    margin:auto;
+    border-radius: 19px;
+    gap: 30px;
+}
+
+.pricing-item {
+    padding: 50px 35px;
+    background-color: white;
+    margin: auto;
+    border-radius: 26px;
+    width: 100%;
+
+    .pricing-title {
+        color: var(--bodyTextColorBlue);
+        font-size: 1.25rem;
+        line-height: 2.125rem;
+        font-weight: bold;
+    }
+
+    .pricing-value {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+
+        .cs-title {
+            font-size: 2.5rem;
+        }
+        .cs-text {
+            opacity: 0.65;
+        }
+    }
+    .pricing-text {
+        color: black;
+        opacity: 0.65;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .pricing-container {
+        flex-direction: row;
+    }
+    .card-container {
+        flex-direction: row;
+        height: 364px;
+    }
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+
+    .pricing-text, .pricing-title, .cs-title, .cs-text {
+        color: white;
+    }
+}
+
+.text-center {
+    text-align: center;
 }
 
 .cs-text {
